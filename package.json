@@ -1,0 +1,147 @@
+{
+  "name": "@helpers/utils",
+  "version": "1.0.0",
+  "description": "A lightweight, comprehensive utility library for JavaScript/TypeScript projects - type checks, string manipulation, array utilities, and more. Framework-agnostic and works with any library or framework.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    },
+    "./checks": {
+      "types": "./dist/checks/index.d.ts",
+      "import": "./dist/checks/index.esm.js",
+      "require": "./dist/checks/index.js"
+    },
+    "./string": {
+      "types": "./dist/string/index.d.ts",
+      "import": "./dist/string/index.esm.js",
+      "require": "./dist/string/index.js"
+    },
+    "./array": {
+      "types": "./dist/array/index.d.ts",
+      "import": "./dist/array/index.esm.js",
+      "require": "./dist/array/index.js"
+    },
+    "./object": {
+      "types": "./dist/object/index.d.ts",
+      "import": "./dist/object/index.esm.js",
+      "require": "./dist/object/index.js"
+    },
+    "./math": {
+      "types": "./dist/math/index.d.ts",
+      "import": "./dist/math/index.esm.js",
+      "require": "./dist/math/index.js"
+    },
+    "./date": {
+      "types": "./dist/date/index.d.ts",
+      "import": "./dist/date/index.esm.js",
+      "require": "./dist/date/index.js"
+    },
+    "./async": {
+      "types": "./dist/async/index.d.ts",
+      "import": "./dist/async/index.esm.js",
+      "require": "./dist/async/index.js"
+    },
+    "./validation": {
+      "types": "./dist/validation/index.d.ts",
+      "import": "./dist/validation/index.esm.js",
+      "require": "./dist/validation/index.js"
+    },
+    "./color": {
+      "types": "./dist/color/index.d.ts",
+      "import": "./dist/color/index.esm.js",
+      "require": "./dist/color/index.js"
+    },
+    "./encoding": {
+      "types": "./dist/encoding/index.d.ts",
+      "import": "./dist/encoding/index.esm.js",
+      "require": "./dist/encoding/index.js"
+    },
+    "./dom": {
+      "types": "./dist/dom/index.d.ts",
+      "import": "./dist/dom/index.esm.js",
+      "require": "./dist/dom/index.js"
+    },
+    "./express": {
+      "types": "./dist/express/index.d.ts",
+      "import": "./dist/express/index.esm.js",
+      "require": "./dist/express/index.js"
+    },
+    "./file": {
+      "types": "./dist/file/index.d.ts",
+      "import": "./dist/file/index.esm.js",
+      "require": "./dist/file/index.js"
+    },
+    "./env": {
+      "types": "./dist/env/index.d.ts",
+      "import": "./dist/env/index.esm.js",
+      "require": "./dist/env/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc && npm run build:esm",
+    "build:esm": "node scripts/build-esm.js",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "utility",
+    "helper",
+    "utils",
+    "typed",
+    "string",
+    "array",
+    "object",
+    "math",
+    "date",
+    "validation",
+    "express",
+    "dom",
+    "browser",
+    "node",
+    "javascript",
+    "typescript"
+  ],
+  "author": {
+    "name": "Nitesh Upadhayay",
+    "email": "upadhayaynitesh94@gmail.com",
+    "url": "https://github.com/NiteshCodes"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NiteshCodes/helpers-utils"
+  },
+  "bugs": {
+    "url": "https://github.com/NiteshCodes/helpers-utils/issues"
+  },
+  "homepage": "https://github.com/NiteshCodes/helpers-utils#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.57.2",
+    "@typescript-eslint/parser": "^8.57.2",
+    "eslint": "^10.1.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  }
+}
