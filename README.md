@@ -1,15 +1,15 @@
-# @helpers/utils - Utility Helpers Library
+# @nitesh-upadhayay/helpers-utils - Utility Helpers Library
 
 A lightweight, zero-dependency utility library providing a comprehensive collection of helper functions, type checks, string manipulation utilities, and more for JavaScript/TypeScript projects. Framework-agnostic - works with any framework, library, or vanilla JavaScript.
 
 ## 📦 Installation
 
 ```bash
-npm install @helpers/utils
+npm install @nitesh-upadhayay/helpers-utils
 # or
-yarn add @helpers/utils
+yarn add @nitesh-upadhayay/helpers-utils
 # or
-pnpm add @helpers/utils
+pnpm add @nitesh-upadhayay/helpers-utils
 ```
 
 ## 🎯 Features
@@ -52,7 +52,7 @@ Robust type checking utilities for common JavaScript types and patterns.
 
 **Usage Example:**
 ```javascript
-import { isBool, isNegative, isEmpty } from '@helpers/utils';
+import { isBool, isNegative, isEmpty } from '@nitesh-upadhayay/helpers-utils';
 
 isBool(true); // true
 isNegative(-5); // true
@@ -100,7 +100,7 @@ Convert strings between different casing styles and manipulate text.
 
 **Usage Example:**
 ```javascript
-import { toCamelCase, toSnakeCase, capitalize } from '@helpers/utils';
+import { toCamelCase, toSnakeCase, capitalize } from '@nitesh-upadhayay/helpers-utils';
 
 toCamelCase('hello-world-example'); // 'helloWorldExample'
 toSnakeCase('helloWorldExample'); // 'hello_world_example'
@@ -147,7 +147,7 @@ Helper functions for array manipulation and transformation.
 
 **Usage Example:**
 ```javascript
-import { chunk, flatten, unique, shuffle } from '@helpers/utils';
+import { chunk, flatten, unique, shuffle } from '@nitesh-upadhayay/helpers-utils';
 
 chunk([1,2,3,4,5], 2); // [[1,2], [3,4], [5]]
 flatten([1, [2, [3, 4]]], 2); // [1, 2, 3, 4]
@@ -189,7 +189,7 @@ Helper functions for object manipulation and transformation.
 
 **Usage Example:**
 ```javascript
-import { pick, omit, merge, deepClone } from '@helpers/utils';
+import { pick, omit, merge, deepClone } from '@nitesh-upadhayay/helpers-utils';
 
 const user = { id: 1, name: 'John', email: 'john@example.com', password: '123' };
 pick(user, ['id', 'name']); // { id: 1, name: 'John' }
@@ -233,7 +233,7 @@ Scientific and mathematical helper functions.
 
 **Usage Example:**
 ```javascript
-import { round, clamp, random, percentage } from '@helpers/utils';
+import { round, clamp, random, percentage } from '@nitesh-upadhayay/helpers-utils';
 
 round(3.14159, 2); // 3.14
 clamp(150, 0, 100); // 100
@@ -278,7 +278,7 @@ Work with dates and time intervals easily.
 
 **Usage Example:**
 ```javascript
-import { addDays, format, difference } from '@helpers/utils';
+import { addDays, format, difference } from '@nitesh-upadhayay/helpers-utils';
 
 addDays(new Date(), 7); // Date 7 days from now
 format(new Date(), 'yyyy-MM-dd'); // '2024-03-27'
@@ -309,7 +309,7 @@ Helpers for working with promises and asynchronous code.
 
 **Usage Example:**
 ```javascript
-import { delay, retry, debounce } from '@helpers/utils';
+import { delay, retry, debounce } from '@nitesh-upadhayay/helpers-utils';
 
 await delay(1000); // Wait 1 second
 await retry(apiCall, { attempts: 3, backoff: 'exponential' });
@@ -345,7 +345,7 @@ Input validation helpers for common data types.
 
 **Usage Example:**
 ```javascript
-import { isStrongPassword, isEmail, isCreditCard } from '@helpers/utils';
+import { isStrongPassword, isEmail, isCreditCard } from '@nitesh-upadhayay/helpers-utils';
 
 isStrongPassword('P@ssw0rd123!'); // true
 isEmail('user@example.com'); // true
@@ -385,7 +385,7 @@ Work with colors and format different data types.
 
 **Usage Example:**
 ```javascript
-import { hexToRgb, formatBytes, formatCurrency } from '@helpers/utils';
+import { hexToRgb, formatBytes, formatCurrency } from '@nitesh-upadhayay/helpers-utils';
 
 hexToRgb('#ff0000'); // { r: 255, g: 0, b: 0 }
 formatBytes(1024 * 1024); // '1 MB'
@@ -414,7 +414,7 @@ Encode, decode, and simple encryption operations.
 
 **Usage Example:**
 ```javascript
-import { toBase64, fromBase64, toHex } from '@helpers/utils';
+import { toBase64, fromBase64, toHex } from '@nitesh-upadhayay/helpers-utils';
 
 toBase64('hello'); // 'aGVsbG8='
 fromBase64('aGVsbG8='); // 'hello'
@@ -461,7 +461,7 @@ Utilities designed for browser and DOM manipulation in any JavaScript environmen
 
 **Usage Example:**
 ```javascript
-import { getQueryParam, setClipboard, getScreenSize } from '@helpers/utils';
+import { getQueryParam, setClipboard, getScreenSize } from '@nitesh-upadhayay/helpers-utils';
 
 getQueryParam('id'); // Get 'id' from URL params
 setClipboard('copied text'); // Copy to clipboard
@@ -495,7 +495,7 @@ Utilities specifically designed for Express applications.
 
 **Usage Example:**
 ```javascript
-import { sendSuccess, sendError, getClientIp } from '@helpers/utils';
+import { sendSuccess, sendError, getClientIp } from '@nitesh-upadhayay/helpers-utils';
 
 // In Express route handler
 app.get('/api/users/:id', (req, res) => {
@@ -533,7 +533,7 @@ Work with file paths and file operations.
 
 **Usage Example:**
 ```javascript
-import { basename, dirname, extname } from '@helpers/utils';
+import { basename, dirname, extname } from '@nitesh-upadhayay/helpers-utils';
 
 basename('/home/user/file.txt'); // 'file.txt'
 dirname('/home/user/file.txt'); // '/home/user'
@@ -559,7 +559,7 @@ Work with environment variables and environment detection.
 
 **Usage Example:**
 ```javascript
-import { isDevelopment, getEnv } from '@helpers/utils';
+import { isDevelopment, getEnv } from '@nitesh-upadhayay/helpers-utils';
 
 const apiUrl = isDevelopment() ? 'http://localhost:3000' : getEnv('API_URL');
 ```
@@ -577,7 +577,7 @@ import {
   validateRequired,
   getClientIp,
   generateRequestId
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 const app = express();
 app.use(express.json());
@@ -608,10 +608,10 @@ app.post('/api/users', (req, res) => {
 
 ```javascript
 // Import individual utilities
-import { toCamelCase, chunk, isEmail } from '@helpers/utils';
+import { toCamelCase, chunk, isEmail } from '@nitesh-upadhayay/helpers-utils';
 
 // Or use namespaces
-import { String, Array, Validation } from '@helpers/utils';
+import { String, Array, Validation } from '@nitesh-upadhayay/helpers-utils';
 
 String.toCamelCase('hello-world'); // 'helloWorld'
 Array.chunk([1,2,3,4], 2); // [[1,2], [3,4]]

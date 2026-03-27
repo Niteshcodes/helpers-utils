@@ -1,11 +1,11 @@
-# @helpers/utils Examples
+# @nitesh-upadhayay/helpers-utils Examples
 
-This file contains practical examples of using the @helpers/utils library.
+This file contains practical examples of using the @nitesh-upadhayay/helpers-utils library.
 
 ## Installation
 
 ```bash
-npm install @helpers/utils
+npm install @nitesh-upadhayay/helpers-utils
 ```
 
 ## Quick Start Examples
@@ -13,7 +13,7 @@ npm install @helpers/utils
 ### Type Checking
 
 ```typescript
-import { isBool, isEmail, isPrime } from '@helpers/utils';
+import { isBool, isEmail, isPrime } from '@nitesh-upadhayay/helpers-utils';
 
 console.log(isBool(true)); // true
 console.log(isEmail('test@example.com')); // true
@@ -29,7 +29,7 @@ import {
   toPascalCase,
   capitalize,
   slugify
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 const text = 'hello world';
 console.log(toCamelCase(text)); // 'helloWorld'
@@ -48,7 +48,7 @@ import {
   unique, 
   shuffle, 
   groupBy 
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 // Chunking
 const arr = [1, 2, 3, 4, 5];
@@ -76,7 +76,7 @@ console.log(groupBy(users, 'role'));
 ### Object Utilities
 
 ```typescript
-import { pick, omit, merge, deepClone, getPath } from '@helpers/utils';
+import { pick, omit, merge, deepClone, getPath } from '@nitesh-upadhayay/helpers-utils';
 
 const user = {
   id: 1,
@@ -111,7 +111,7 @@ import {
   random, 
   factorial, 
   fibonacci 
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 console.log(round(3.14159, 2)); // 3.14
 console.log(clamp(150, 0, 100)); // 100
@@ -128,7 +128,7 @@ import {
   format, 
   getAge, 
   isSameDay 
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 const date = new Date();
 
@@ -146,7 +146,7 @@ import {
   retry, 
   debounce, 
   throttle 
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 // Delay
 async function delayedLog() {
@@ -181,7 +181,7 @@ import {
   isStrongPassword, 
   isCreditCard, 
   isUuid 
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 console.log(isStrongPassword('P@ssw0rd123!')); // true
 console.log(isCreditCard('4532111111111111')); // true
@@ -196,7 +196,7 @@ import {
   lighten, 
   darken, 
   complementColor 
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 console.log(hexToRgb('#ff0000')); // { r: 255, g: 0, b: 0 }
 console.log(lighten('#333333', 20)); // Lighter shade
@@ -211,7 +211,7 @@ import {
   formatBytes, 
   formatCurrency, 
   formatPhone 
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 console.log(formatBytes(1024 * 1024)); // '1 MB'
 console.log(formatCurrency(1234.56, 'USD')); // '$1,234.56'
@@ -226,7 +226,7 @@ import {
   setClipboard, 
   getScreenSize,
   getLocalStorage 
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 // Get URL query parameter
 const id = getQueryParam('id');
@@ -251,7 +251,7 @@ import {
   validateRequired,
   getClientIp,
   sanitizeData
-} from '@helpers/utils';
+} from '@nitesh-upadhayay/helpers-utils';
 
 const app = express();
 app.use(express.json());
@@ -285,7 +285,7 @@ app.listen(3000);
 ### Using Namespaces
 
 ```typescript
-import { String, Array, Object } from '@helpers/utils';
+import { String, Array, Object } from '@nitesh-upadhayay/helpers-utils';
 
 // Use as namespaces
 String.toCamelCase('hello-world'); // 'helloWorld'

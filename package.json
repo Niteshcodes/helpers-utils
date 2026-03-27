@@ -1,5 +1,5 @@
 {
-  "name": "@helpers/utils",
+  "name": "universal-helper-functions",
   "version": "1.0.0",
   "description": "A lightweight, comprehensive utility library for JavaScript/TypeScript projects - type checks, string manipulation, array utilities, and more. Framework-agnostic and works with any library or framework.",
   "main": "dist/index.js",
