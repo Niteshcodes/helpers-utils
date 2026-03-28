@@ -1,6 +1,6 @@
 {
   "name": "universal-helper-functions",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A lightweight, comprehensive utility library for JavaScript/TypeScript projects - type checks, string manipulation, array utilities, and more. Framework-agnostic and works with any library or framework.",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -84,13 +84,12 @@
   },
   "files": [
     "dist",
-    "src",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsc && npm run build:esm",
+    "build": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\" && tsc && npm run build:esm",
     "build:esm": "node scripts/build-esm.js",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
@@ -123,12 +122,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NiteshCodes/helpers-utils"
+    "url": "https://github.com/NiteshCodes/universal-helper-functions"
   },
   "bugs": {
-    "url": "https://github.com/NiteshCodes/helpers-utils/issues"
+    "url": "https://github.com/NiteshCodes/universal-helper-functions/issues"
   },
-  "homepage": "https://github.com/NiteshCodes/helpers-utils#readme",
+  "homepage": "https://github.com/NiteshCodes/universal-helper-functions#readme",
   "engines": {
     "node": ">=14.0.0"
   },

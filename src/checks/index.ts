@@ -10,6 +10,62 @@ export function isBool(value: any): value is boolean {
 }
 
 /**
+ * Check if value represents true (boolean or common string/number forms)
+ */
+export function isTrue(value: any): boolean {
+  if (isBool(value)) return value;
+  if (isNumber(value)) return value === 1;
+  if (!isString(value)) return false;
+
+  const normalized = value.trim().toLowerCase();
+  return (
+    normalized === 'true' ||
+    normalized === '1' ||
+    normalized === 'yes' ||
+    normalized === 'y' ||
+    normalized === 'on'
+  );
+}
+
+/**
+ * Check if value represents false (boolean or common string/number forms)
+ */
+export function isFalse(value: any): boolean {
+  if (isBool(value)) return !value;
+  if (isNullOrUndefined(value)) return true;
+  if (isNumber(value)) return value === 0;
+  if (!isString(value)) return false;
+
+  const normalized = value.trim().toLowerCase();
+  return (
+    normalized === '' ||
+    normalized === 'false' ||
+    normalized === '0' ||
+    normalized === 'no' ||
+    normalized === 'n' ||
+    normalized === 'off' ||
+    normalized === 'null' ||
+    normalized === 'undefined'
+  );
+}
+
+/**
+ * Check if value can be interpreted as a boolean-like input
+ */
+export function isBooleanLike(value: any): boolean {
+  return isTrue(value) || isFalse(value);
+}
+
+/**
+ * Convert boolean-like input to a boolean. Returns fallback for unknown values.
+ */
+export function toBoolean(value: any, fallback = false): boolean {
+  if (isTrue(value)) return true;
+  if (isFalse(value)) return false;
+  return fallback;
+}
+
+/**
  * Check if value is a number
  */
 export function isNumber(value: any): value is number {

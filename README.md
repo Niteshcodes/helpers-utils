@@ -1,24 +1,28 @@
-# @nitesh-upadhayay/helpers-utils - Utility Helpers Library
+# universal-helper-functions - Utility Helpers Library
 
 A lightweight, zero-dependency utility library providing a comprehensive collection of helper functions, type checks, string manipulation utilities, and more for JavaScript/TypeScript projects. Framework-agnostic - works with any framework, library, or vanilla JavaScript.
 
 ## 📦 Installation
 
 ```bash
-npm install @nitesh-upadhayay/helpers-utils
+npm install universal-helper-functions
 # or
-yarn add @nitesh-upadhayay/helpers-utils
+yarn add universal-helper-functions
 # or
-pnpm add @nitesh-upadhayay/helpers-utils
+pnpm add universal-helper-functions
 ```
 
 ## 🎯 Features
 
-### 1. Type Checks (31 Functions)
+### 1. Type Checks (35 Functions)
 Robust type checking utilities for common JavaScript types and patterns.
 
 #### Available Checks
 - `isBool(value)` - Check if value is a boolean
+- `isTrue(value)` - Check if value represents true (`true`, `'true'`, `'1'`, `'yes'`, `'on'`)
+- `isFalse(value)` - Check if value represents false (`false`, `'false'`, `'0'`, `'no'`, `'off'`, `null`, `undefined`)
+- `isBooleanLike(value)` - Check if value can be interpreted as a boolean
+- `toBoolean(value, fallback?)` - Convert boolean-like input to boolean with optional fallback
 - `isNegative(value)` - Check if number is negative
 - `isPositive(value)` - Check if number is positive
 - `isZero(value)` - Check if value equals zero
@@ -52,9 +56,17 @@ Robust type checking utilities for common JavaScript types and patterns.
 
 **Usage Example:**
 ```javascript
-import { isBool, isNegative, isEmpty } from '@nitesh-upadhayay/helpers-utils';
+import { isBool, isTrue, isFalse, toBoolean, isNegative, isEmpty } from 'universal-helper-functions';
 
 isBool(true); // true
+isTrue('true'); // true
+isTrue(true); // true
+isTrue(undefined); // false
+isFalse('false'); // true
+isFalse(null); // true
+toBoolean('yes'); // true
+toBoolean('no'); // false
+toBoolean('random', true); // true (fallback)
 isNegative(-5); // true
 isEmpty(''); // true
 isEmpty([]); // true
@@ -100,7 +112,7 @@ Convert strings between different casing styles and manipulate text.
 
 **Usage Example:**
 ```javascript
-import { toCamelCase, toSnakeCase, capitalize } from '@nitesh-upadhayay/helpers-utils';
+import { toCamelCase, toSnakeCase, capitalize } from 'universal-helper-functions';
 
 toCamelCase('hello-world-example'); // 'helloWorldExample'
 toSnakeCase('helloWorldExample'); // 'hello_world_example'
@@ -147,7 +159,7 @@ Helper functions for array manipulation and transformation.
 
 **Usage Example:**
 ```javascript
-import { chunk, flatten, unique, shuffle } from '@nitesh-upadhayay/helpers-utils';
+import { chunk, flatten, unique, shuffle } from 'universal-helper-functions';
 
 chunk([1,2,3,4,5], 2); // [[1,2], [3,4], [5]]
 flatten([1, [2, [3, 4]]], 2); // [1, 2, 3, 4]
@@ -189,7 +201,7 @@ Helper functions for object manipulation and transformation.
 
 **Usage Example:**
 ```javascript
-import { pick, omit, merge, deepClone } from '@nitesh-upadhayay/helpers-utils';
+import { pick, omit, merge, deepClone } from 'universal-helper-functions';
 
 const user = { id: 1, name: 'John', email: 'john@example.com', password: '123' };
 pick(user, ['id', 'name']); // { id: 1, name: 'John' }
@@ -233,7 +245,7 @@ Scientific and mathematical helper functions.
 
 **Usage Example:**
 ```javascript
-import { round, clamp, random, percentage } from '@nitesh-upadhayay/helpers-utils';
+import { round, clamp, random, percentage } from 'universal-helper-functions';
 
 round(3.14159, 2); // 3.14
 clamp(150, 0, 100); // 100
@@ -278,7 +290,7 @@ Work with dates and time intervals easily.
 
 **Usage Example:**
 ```javascript
-import { addDays, format, difference } from '@nitesh-upadhayay/helpers-utils';
+import { addDays, format, difference } from 'universal-helper-functions';
 
 addDays(new Date(), 7); // Date 7 days from now
 format(new Date(), 'yyyy-MM-dd'); // '2024-03-27'
@@ -309,7 +321,7 @@ Helpers for working with promises and asynchronous code.
 
 **Usage Example:**
 ```javascript
-import { delay, retry, debounce } from '@nitesh-upadhayay/helpers-utils';
+import { delay, retry, debounce } from 'universal-helper-functions';
 
 await delay(1000); // Wait 1 second
 await retry(apiCall, { attempts: 3, backoff: 'exponential' });
@@ -345,7 +357,7 @@ Input validation helpers for common data types.
 
 **Usage Example:**
 ```javascript
-import { isStrongPassword, isEmail, isCreditCard } from '@nitesh-upadhayay/helpers-utils';
+import { isStrongPassword, isEmail, isCreditCard } from 'universal-helper-functions';
 
 isStrongPassword('P@ssw0rd123!'); // true
 isEmail('user@example.com'); // true
@@ -385,7 +397,7 @@ Work with colors and format different data types.
 
 **Usage Example:**
 ```javascript
-import { hexToRgb, formatBytes, formatCurrency } from '@nitesh-upadhayay/helpers-utils';
+import { hexToRgb, formatBytes, formatCurrency } from 'universal-helper-functions';
 
 hexToRgb('#ff0000'); // { r: 255, g: 0, b: 0 }
 formatBytes(1024 * 1024); // '1 MB'
@@ -414,7 +426,7 @@ Encode, decode, and simple encryption operations.
 
 **Usage Example:**
 ```javascript
-import { toBase64, fromBase64, toHex } from '@nitesh-upadhayay/helpers-utils';
+import { toBase64, fromBase64, toHex } from 'universal-helper-functions';
 
 toBase64('hello'); // 'aGVsbG8='
 fromBase64('aGVsbG8='); // 'hello'
@@ -461,7 +473,7 @@ Utilities designed for browser and DOM manipulation in any JavaScript environmen
 
 **Usage Example:**
 ```javascript
-import { getQueryParam, setClipboard, getScreenSize } from '@nitesh-upadhayay/helpers-utils';
+import { getQueryParam, setClipboard, getScreenSize } from 'universal-helper-functions';
 
 getQueryParam('id'); // Get 'id' from URL params
 setClipboard('copied text'); // Copy to clipboard
@@ -495,7 +507,7 @@ Utilities specifically designed for Express applications.
 
 **Usage Example:**
 ```javascript
-import { sendSuccess, sendError, getClientIp } from '@nitesh-upadhayay/helpers-utils';
+import { sendSuccess, sendError, getClientIp } from 'universal-helper-functions';
 
 // In Express route handler
 app.get('/api/users/:id', (req, res) => {
@@ -533,7 +545,7 @@ Work with file paths and file operations.
 
 **Usage Example:**
 ```javascript
-import { basename, dirname, extname } from '@nitesh-upadhayay/helpers-utils';
+import { basename, dirname, extname } from 'universal-helper-functions';
 
 basename('/home/user/file.txt'); // 'file.txt'
 dirname('/home/user/file.txt'); // '/home/user'
@@ -559,7 +571,7 @@ Work with environment variables and environment detection.
 
 **Usage Example:**
 ```javascript
-import { isDevelopment, getEnv } from '@nitesh-upadhayay/helpers-utils';
+import { isDevelopment, getEnv } from 'universal-helper-functions';
 
 const apiUrl = isDevelopment() ? 'http://localhost:3000' : getEnv('API_URL');
 ```
@@ -577,7 +589,7 @@ import {
   validateRequired,
   getClientIp,
   generateRequestId
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 const app = express();
 app.use(express.json());
@@ -608,10 +620,10 @@ app.post('/api/users', (req, res) => {
 
 ```javascript
 // Import individual utilities
-import { toCamelCase, chunk, isEmail } from '@nitesh-upadhayay/helpers-utils';
+import { toCamelCase, chunk, isEmail } from 'universal-helper-functions';
 
 // Or use namespaces
-import { String, Array, Validation } from '@nitesh-upadhayay/helpers-utils';
+import { String, Array, Validation } from 'universal-helper-functions';
 
 String.toCamelCase('hello-world'); // 'helloWorld'
 Array.chunk([1,2,3,4], 2); // [[1,2], [3,4]]
@@ -665,7 +677,7 @@ Contributions are welcome! Please see CONTRIBUTING.md for guidelines.
 ## 📞 Support & Contact
 
 For issues, questions, or suggestions, please:
-- Open an issue on [GitHub](https://github.com/NiteshCodes/helpers-utils/issues)
+- Open an issue on [GitHub](https://github.com/NiteshCodes/universal-helper-functions/issues)
 - Email: upadhayaynitesh94@gmail.com
 - GitHub: [@NiteshCodes](https://github.com/NiteshCodes)
 

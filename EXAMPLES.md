@@ -1,11 +1,11 @@
-# @nitesh-upadhayay/helpers-utils Examples
+# universal-helper-functions Examples
 
-This file contains practical examples of using the @nitesh-upadhayay/helpers-utils library.
+This file contains practical examples of using the universal-helper-functions library.
 
 ## Installation
 
 ```bash
-npm install @nitesh-upadhayay/helpers-utils
+npm install universal-helper-functions
 ```
 
 ## Quick Start Examples
@@ -13,7 +13,7 @@ npm install @nitesh-upadhayay/helpers-utils
 ### Type Checking
 
 ```typescript
-import { isBool, isEmail, isPrime } from '@nitesh-upadhayay/helpers-utils';
+import { isBool, isEmail, isPrime } from 'universal-helper-functions';
 
 console.log(isBool(true)); // true
 console.log(isEmail('test@example.com')); // true
@@ -29,7 +29,7 @@ import {
   toPascalCase,
   capitalize,
   slugify
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 const text = 'hello world';
 console.log(toCamelCase(text)); // 'helloWorld'
@@ -48,7 +48,7 @@ import {
   unique, 
   shuffle, 
   groupBy 
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 // Chunking
 const arr = [1, 2, 3, 4, 5];
@@ -76,7 +76,7 @@ console.log(groupBy(users, 'role'));
 ### Object Utilities
 
 ```typescript
-import { pick, omit, merge, deepClone, getPath } from '@nitesh-upadhayay/helpers-utils';
+import { pick, omit, merge, deepClone, getPath } from 'universal-helper-functions';
 
 const user = {
   id: 1,
@@ -111,7 +111,7 @@ import {
   random, 
   factorial, 
   fibonacci 
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 console.log(round(3.14159, 2)); // 3.14
 console.log(clamp(150, 0, 100)); // 100
@@ -128,7 +128,7 @@ import {
   format, 
   getAge, 
   isSameDay 
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 const date = new Date();
 
@@ -146,7 +146,7 @@ import {
   retry, 
   debounce, 
   throttle 
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 // Delay
 async function delayedLog() {
@@ -181,7 +181,7 @@ import {
   isStrongPassword, 
   isCreditCard, 
   isUuid 
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 console.log(isStrongPassword('P@ssw0rd123!')); // true
 console.log(isCreditCard('4532111111111111')); // true
@@ -196,7 +196,7 @@ import {
   lighten, 
   darken, 
   complementColor 
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 console.log(hexToRgb('#ff0000')); // { r: 255, g: 0, b: 0 }
 console.log(lighten('#333333', 20)); // Lighter shade
@@ -211,7 +211,7 @@ import {
   formatBytes, 
   formatCurrency, 
   formatPhone 
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 console.log(formatBytes(1024 * 1024)); // '1 MB'
 console.log(formatCurrency(1234.56, 'USD')); // '$1,234.56'
@@ -226,7 +226,7 @@ import {
   setClipboard, 
   getScreenSize,
   getLocalStorage 
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 // Get URL query parameter
 const id = getQueryParam('id');
@@ -251,7 +251,7 @@ import {
   validateRequired,
   getClientIp,
   sanitizeData
-} from '@nitesh-upadhayay/helpers-utils';
+} from 'universal-helper-functions';
 
 const app = express();
 app.use(express.json());
@@ -285,7 +285,7 @@ app.listen(3000);
 ### Using Namespaces
 
 ```typescript
-import { String, Array, Object } from '@nitesh-upadhayay/helpers-utils';
+import { String, Array, Object } from 'universal-helper-functions';
 
 // Use as namespaces
 String.toCamelCase('hello-world'); // 'helloWorld'
@@ -302,6 +302,6 @@ For more comprehensive examples, please refer to:
 ## Support
 
 For issues, questions, or suggestions, please:
-- Open an issue on [GitHub](https://github.com/NiteshCodes/helpers-utils/issues)
+- Open an issue on [GitHub](https://github.com/NiteshCodes/universal-helper-functions/issues)
 - Email: upadhayaynitesh94@gmail.com
 - GitHub: [@NiteshCodes](https://github.com/NiteshCodes)

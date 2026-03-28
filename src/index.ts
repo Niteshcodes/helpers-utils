@@ -1,5 +1,5 @@
 // ============================================================================
-// @helpers/utils - Main Export File
+// universal-helper-functions - Main Export File
 // ============================================================================
 
 // Export all modules
@@ -22,6 +22,10 @@ export * as Env from './env';
 export {
   // Checks
   isBool,
+  isTrue,
+  isFalse,
+  isBooleanLike,
+  toBoolean,
   isNumber,
   isString,
   isArray,

@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Author:** Nitesh Upadhayay ([@NiteshCodes](https://github.com/NiteshCodes))
 
 ### Added
-- Initial release of @nitesh-upadhayay/helpers-utils
+- Initial release of universal-helper-functions
 - Type Checks module (isBool, isNegative, isEmail, isPrime, etc.)
 - String Casing & Manipulation module (camelCase, snake_case, kebab-case, etc.)
 - Array Utilities module (chunk, flatten, shuffle, unique, etc.)

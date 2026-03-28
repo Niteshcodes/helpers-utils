@@ -1,6 +1,6 @@
-# Contributing to @nitesh-upadhayay/helpers-utils
+# Contributing to universal-helper-functions
 
-Thank you for your interest in contributing to @nitesh-upadhayay/helpers-utils! This document provides guidelines and instructions for contributing.
+Thank you for your interest in contributing to universal-helper-functions! This document provides guidelines and instructions for contributing.
 
 ## Code of Conduct
 
@@ -35,8 +35,8 @@ This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDU
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/helpers-utils
-cd helpers-utils
+git clone https://github.com/yourusername/universal-helper-functions
+cd universal-helper-functions
 
 # Install dependencies
 npm install
